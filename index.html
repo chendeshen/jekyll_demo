@@ -1,11 +1,14 @@
 ---
 layout: default
-title: My Blog
+title: Alessandro Di Martino
 ---
-<h2>{{ page.title }}</h2>
-<p>Latest</p>
-<ul>
-    {% for post in site.posts %}
-    <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+
+{% for post in site.posts %}
+<article itemscope="" itemtype="http://schema.org/Blog">
+  <time datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished" class="post-link-date">{{ post.date | date_to_string }}</time>
+  <span class="post-link-divider">~</span>
+  <h2 class="post-link">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h2>
+</article>
+{% endfor %}

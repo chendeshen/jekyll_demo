@@ -1,1 +1,14 @@
 baseurl: http://j.chendeshen.com
+markdown: redcarpet
+
+redcarpet:
+  extensions:
+    - smart
+
+pygments: true
+
+permalink: /:title
+
+exclude:
+  - LICENSE
+  - README.md

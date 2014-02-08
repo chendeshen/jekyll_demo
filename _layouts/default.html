@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>{{ page.title }}</title>
-</head>
-<body>
-  {{ content }}
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,700,400italic|Source+Code+Pro:500" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/daylight.css">
+    <!-- Google Analytics - Begin -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23698429-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+    </script>
+    <!-- Google Analytics - End -->
+  </head>
+  <body>
+    <header>
+      <h1 id="title">
+        <a href="/">Alessandro Di Martino</a>
+      </h1>
+    </header>
+    <section>
+      {{ content }}
+    </section>
+    <footer>
+      <nav id="footer-nav">
+        {% if page.url != "/index.html" %}
+        <a href="/" id="footer-nav-first-item">Home</a>
+        {% endif %}
+        <a href="mailto:aledimax@gmail.com" class="footer-nav-item">aledimax@gmail.com</a>
+        <a href="//twitter.com/aledimax" class="footer-nav-item">Twitter</a>
+        <a href="//github.com/zeis" class="footer-nav-item">GitHub</a>
+      </nav>
+      <p>
+        Fork on <a href="//github.com/zeis/zeis.github.com">GitHub</a>!
+      </p>
+    </footer>
+  </body>
 </html>
